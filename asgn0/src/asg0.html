@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Draw a blue rectangle (canvas version)</title>
+    </head>
+
+    <body onload="main()">
+        <canvas id="example" width="400" height="400">
+            Please use a browser that supports "canvas"
+        </canvas>
+        <script src="asg0.js"></script>
+
+        <!-- Load libraries -->
+        <script src="lib/cuon-matrix-cse160.js"></script>
+        
+        <!-- Vector Boxes -->
+        <br>   
+
+        <label for="x1Value">v1:x</label>            
+        <input type="number" id="x1Value" name="x1Value" required minlength="4" maxlength="8" size="10" />
+        
+        <label for="y1Value">y</label>
+        <input type="number" id="y1Value" name="y1Value" required minlength="4" maxlength="8" size="10" />
+        
+        <br>
+
+        <label for="x2Value">v2:x</label>            
+        <input type="number" id="x2Value" name="x2Value" required minlength="4" maxlength="8" size="10" />
+        
+        <label for="y2Value">y</label>
+        <input type="number" id="y2Value" name="y2Value" required minlength="4" maxlength="8" size="10" />        
+        
+        
+        <!-- Draw button -->
+        <br>          
+        <input type="button" value="Draw" onclick="handleDrawEvent()" />
+
+        <!-- Select AND Scalar-->
+        <br><br>          
+        <label for="Operations">Operation:</label>
+
+        <select name="Operations" id="Operations">
+          <option value="Add">Add</option>
+          <option value="Subtract">Subtract</option>
+          <option value="Divide">Divide</option>
+          <option value="Multiply">Multiply</option>
+          <option value="Magnitude">Magnitude</option>
+          <option value="Normalize">Normalize</option>
+          <option value="Angle Between">Angle Between</option>
+          <option value="Area">Area</option>
+        </select>
+
+        <label for="Scalar">Scalar:</label>
+        <input type="number" id="Scalar" name="Scalar" required minlength="4" maxlength="8" size="10" /> 
+        
+        <input type="button" value="Draw" onclick="handleDrawOperationEvent()" />
+    </body>
+</html>
