@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+    STORY: The magic blocks scattered all over the place!
+    Help the cat find all the seven magic blocks!
+    <p>
+    Two Hints for one of the blocks:
+    OUT OF THIS WORLD,
+    The cat says "Meow".
+
+    <p id ="numdot"> XXX </p>
+    <p>
+    Top Tail Joint: <input type="range" min="-45" max="45" value="0" class="slider" id="TopTailJointSlide">
+    <p>
+    Middle Tail Joint: <input type="range" min="-45" max="45" value="0" class="slider" id="MiddleTailJointSlide">
+    <p>
+    Bottom Tail Joint: <input type="range" min="-45" max="45" value="0" class="slider" id="BottomTailJointSlide">
+    <p>
+    Ears: <input type="range" min="-5" max="5" value="0" class="slider" id="EarSlide">
+    <button type="button" id="animationEarSlideOnButton">ON</button>
+    <button type="button" id="animationEarSlideOffButton">OFF</button>
+    <p>
+    Shake: <button type="button" id="animationShakeOnButton">ON</button>
+    <button type="button" id="animationShakeOffButton">OFF</button>
+    Wag Tail: <button type="button" id="animationwagTailOnButton">ON</button>
+    <button type="button" id="animationwagTailOffButton">OFF</button>
+    <p>
+    Reset Animation: <button type="button" id="resetAnimation">Reset</button>
+    <p>
+    Camera Angle: <input type="range" min="0" max="360" value="5" class="slider" id="angleSlide">
+    Y Axis: <input type="range" min="0" max="360" value="5" class="slider" id="angleYSlide">
+    <p>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="World.js"></script>
+    <script src="Camera.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="TrianglePrism.js"></script>
+  </body>
+</html>
